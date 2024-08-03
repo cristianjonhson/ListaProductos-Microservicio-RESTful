@@ -1,10 +1,10 @@
-package cl.edu.lite.thinking.products.service;
+package com.example.productservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.edu.lite.thinking.products.model.Product;
-import cl.edu.lite.thinking.products.repository.ProductRepository;
+import com.example.productservice.model.Product;
+import com.example.productservice.repository.ProductRepository;
 
 import java.util.List;
 import java.util.Optional;
