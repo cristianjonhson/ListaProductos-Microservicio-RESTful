@@ -1,13 +1,13 @@
-package cl.edu.lite.thinking.products;
+package com.example.productservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import cl.edu.lite.thinking.products.model.Product;
-import cl.edu.lite.thinking.products.repository.ProductRepository;
-import cl.edu.lite.thinking.products.service.ProductService;
+import com.example.productservice.model.Product;
+import com.example.productservice.repository.ProductRepository;
+import com.example.productservice.service.ProductService;
 
 import java.util.Optional;
 
@@ -32,7 +32,6 @@ public class ProductTests {
         Product product = new Product();
         product.setId(1L);
         product.setName("Test Product");
-        product.setDescription("Test Description");
         product.setPrice(100.0);
 
         when(productRepository.findById(1L)).thenReturn(Optional.of(product));
@@ -46,7 +45,6 @@ public class ProductTests {
     public void testCreateProduct() {
         Product product = new Product();
         product.setName("New Product");
-        product.setDescription("New Description");
         product.setPrice(200.0);
 
         when(productRepository.save(any(Product.class))).thenReturn(product);
